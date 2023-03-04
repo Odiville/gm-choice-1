@@ -5,7 +5,7 @@ Leverages Chainlink VRF to pick out the apprentice out of a set of two addresses
 Clone repository and run `npm install .` and then `node apprentice-pick.js`
 Tested with Node v18.8.0, but should work on a variety of node versions.
 
-# VRF Txs (V2)
+# VRF Txs
 
 See VRF Transactions here:  
 Contract:    https://etherscan.io/address/0x666184a1f8d765e32f44096dfa7123b95a386f5f#code  
@@ -17,3 +17,10 @@ Result:      `0`
 Address:     `0x032261cB5868414D70251a4D609e196838551457`  
 
 Also appears in `apprentice-pick.js`
+
+# Box Ordering Provenance
+Picking what box the chosen address by VRF should correspond to is an arbitrary choice and can be selected post-VRF to achieve control.  
+In order to prevent this, a provenance transaction was submitted detailing that Box #1 / Box A should correspond to the VRF-chosen address,
+and Box #2 / Box B should correspond to the other address.  
+https://etherscan.io/tx/0xeac0d7ccf6d805fd7bb19f9265ee7c92cd7e3431cff4a9e89142b95a3d1b7b6a  
+View transaction data as UTF-8 to read the message.  
